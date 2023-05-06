@@ -97,6 +97,7 @@ class SimplyStaticPostProcess:
             config_ (dict, optional): contains diverse conditions for SimplyStaticPostProcess object.
         """
         if config_:
+            helpers.log_to_console("DEBUG", "Jussi")
             self.config = config_
             self.output_folder = Path(self.config["root"], self.config["output_folder"])
             self.zip_file_path = Path(self.config["root"], self.config["zip_file_name"])
@@ -433,10 +434,9 @@ if __name__ == "__main__":
     )
 
     page_404 = (
-        params["page_404"]
-#        params["page_404"][0]
- #       if isinstance(params["page_404"], list)
-  #      else params["page_404"]
+        params["page_404"][0]
+        if isinstance(params["page_404"], list)
+        else params["page_404"]
     )
 
     page_redirects = (
