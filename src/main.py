@@ -453,9 +453,9 @@ if __name__ == "__main__":
     )
 
     page_search = (
-        params["page_search"][0]
-        if isinstance(params["page_search"], list)
-        else params["page_search"]
+#        params["page_search"][0]
+ #       if isinstance(params["page_search"], list)
+  #      else params["page_search"]
     )
 
  #   page_404 = page_404 if page_404 else "404-error"
@@ -464,7 +464,8 @@ if __name__ == "__main__":
     page_redirects = "redirects"
 #    page_robots = page_robots if page_robots else "robots"
     page_robots = "robots"
-    page_search = page_search if page_search else "search"
+#    page_search = page_search if page_search else "search"
+    page_search = "search"
     archive_name = (
         archive_name if archive_name.endswith(".zip") else archive_name + ".zip"
     )
