@@ -131,6 +131,8 @@ class SimplyStaticPostProcess:
             helpers.log_to_console("INFO", "Simply Static Zip File Downloaded")
         else:
             helpers.log_to_console("ERROR", "Simply Static Zip File Not available")
+            helpers.log_to_console("ERROR", response.status_code)
+            
 
         current_session.cookies.clear()
 
