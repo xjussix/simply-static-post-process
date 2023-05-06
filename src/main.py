@@ -435,9 +435,9 @@ if __name__ == "__main__":
     )
 
     page_404 = (
-        params["page_404"][0]
-        if isinstance(params["page_404"], list)
-        else params["page_404"]
+     #   params["page_404"][0]
+      #  if isinstance(params["page_404"], list)
+       # else params["page_404"]
     )
 
     page_redirects = (
@@ -458,7 +458,8 @@ if __name__ == "__main__":
         else params["page_search"]
     )
 
-    page_404 = page_404 if page_404 else "404-error"
+ #   page_404 = page_404 if page_404 else "404-error"
+    page_404 = "404-error"
     page_redirects = page_redirects if page_redirects else "redirects"
     page_robots = page_robots if page_robots else "robots"
     page_search = page_search if page_search else "search"
