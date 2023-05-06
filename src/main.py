@@ -97,7 +97,7 @@ class SimplyStaticPostProcess:
             config_ (dict, optional): contains diverse conditions for SimplyStaticPostProcess object.
         """
         if config_:
-            helpers.log_to_console("DEBUG", "Jussi")
+            helpers.log_to_console("INFO", "Blah")
             self.config = config_
             self.output_folder = Path(self.config["root"], self.config["output_folder"])
             self.zip_file_path = Path(self.config["root"], self.config["zip_file_name"])
@@ -414,6 +414,7 @@ if __name__ == "__main__":
     except:
         params = parse_qs(os.environ.get("INCOMING_HOOK_BODY"))
         helpers.log_to_console("DEBUG", params)
+        helpers.log_to_console("DEBUG", "Jussi")
 
     archive_name = (
         params["archive_name"][0]
