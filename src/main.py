@@ -117,9 +117,15 @@ class SimplyStaticPostProcess:
         helpers.log_to_console("INFO", configurations["zip_url"])
 
         headers = CaseInsensitiveDict()
-        headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-        headers["Pragma"] = "no-cache"
-        headers["Expires"] = "0"
+#        headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+#        headers["Pragma"] = "no-cache"
+#        headers["Expires"] = "0"
+        headers["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/112.0"
+        headers["Accept"] = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+        headers["Accept-Language"] = "en-GB,en;q=0.5"
+        headers["Accept-Encoding"] = "gzip, deflate, br"
+        headers["Connection"] = "keep-alive"
+        headers["Upgrade-Insecure-Requests"] = "1"
 
         current_session = requests.session()
         response = current_session.get(configurations["zip_url"], headers=headers)
